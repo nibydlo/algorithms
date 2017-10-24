@@ -48,6 +48,13 @@ void prep() {
             ways[i][j] = min(ways[i][j - 1], ways[dp[i][j - 1]][j - 1]);
         }
     }
+
+    /*for (int i = 0; i < n; i++) {
+        for (int j = 0; j < log; j++) {
+            cout << ways[i][j] << " ";
+        }
+        cout << endl;
+    }*/
 }
 
 int lca(int u, int v) {
@@ -69,7 +76,7 @@ int lca(int u, int v) {
     }
     //cout << "run" << endl;
     if (u == v) {
-        return u;
+        return min_edge;
     }
 
     for (int i = log - 1; i >= 0; i--) {
@@ -100,7 +107,7 @@ int main() {
     batya.resize(n);
     weight.resize(n);
     batya[0] = 0;
-    weight[0] = 0;
+    weight[0] = INT_MAX;
 
     int x, y;
     for (int i = 1; i < n; i++) {
@@ -113,9 +120,9 @@ int main() {
     for (int i = 0; i < n; i++) {
         cout << batya[i] << " ";
     }
-    cout << endl;
+    cout << endl;*/
 
-    cout << "weight vector: ";
+    /*cout << "weight vector: ";
     for (int i = 0; i < n; i++) {
         cout << weight[i] << " ";
     }
