@@ -1,0 +1,7 @@
+3 3
+vova
+masha
+gosha
+-vova => -masha
+-masha => +gosha
++gosha => +vova
