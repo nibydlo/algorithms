@@ -1,0 +1,11 @@
+5 10
+link 2 5 
+link 1 5 
+connected 1 2 
+cut 2 5 
+connected 1 2 
+connected 5 1 
+link 2 3 
+link 2 4 
+link 3 5 
+connected 1 2
