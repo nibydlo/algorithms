@@ -139,7 +139,6 @@ int main() {
 	for (int i = 0; i < n; i++) {
 		for (int j = 0; j < n; j++) {
 			if (i != j) {
-				//cout << "i = " << i << " j = " << j << endl;
 				int cc = 3;
 				if (table[i][j] == 'w') {
 					cc = 2;
@@ -155,8 +154,6 @@ int main() {
 				if (jj < ii) {
 					swap(ii, jj);
 				}
-				//cout << "ii = " << ii << "jj = " << jj << " num = ";
-				//cout << pair_to_num[make_pair(ii, jj)] << endl;
 				add_edge(i + 1, pair_to_num[make_pair(ii, jj)], cc);
 			}
 		}
@@ -169,15 +166,6 @@ int main() {
 			add_edge(pair_to_num[make_pair(i, j)], t - 1, 3);
 		}
 	}
-
-	/*cout << "edges: " << endl;
-	for (int i = 0; i < edges.size(); i++) {
-		Edge e = edges[i];
-		cout << "id = " << e.id << " from = " << e.from << " to = " << e.to << " c = " << e.c << " f = " << e.f << endl;
-	}
-
-	cout << "here" << endl;*/
-
 
 	int ans = 0;
 	while(true) {
@@ -198,17 +186,8 @@ int main() {
 		}
 	}
 
-	/*cout << "g: " << endl;
-	for (int i = 0; i < g.size(); i++) {
-		for (int j = 0; j < g[i].size(); j++) {
-			cout << "(" << g[i][j].first << ", " << g[i][j].second << ") ";
-		}
-		cout << endl;
-	}*/
-
 	for (int i = 0; i < n; i++) {
 		for (int j = 0; j < n; j++) {
-			//cout << " i = " << i << " j = " << j << endl;
 			if (table[i][j] != '.') {
 				cout << table[i][j];
 			} else {
@@ -217,7 +196,6 @@ int main() {
 				int num = pair_to_num[make_pair(ii, jj)];
 				int game_res = -1;
 				for (int k = 0; k < g[num].size(); k++) {
-				//	cout << "key is" << edges[g[num][k].second].to << " i + 1 = " << i + 1 << endl;
 					if (edges[g[num][k].second].to == i + 1) {
 
 						game_res = -edges[g[num][k].second].f;
@@ -235,7 +213,6 @@ int main() {
 				} else {
 					cout << "nf num is" << num;
 				}
-				//cout << endl;
 			}
 		}
 		cout << endl;
